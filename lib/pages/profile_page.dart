@@ -1,3 +1,4 @@
+import './login_page.dart';
 import 'package:flutter/material.dart';
 
 
@@ -12,7 +13,10 @@ class ProfilePage extends StatelessWidget {
       appBar: AppBar(
         elevation: 0,
         backgroundColor:const Color(0XFFF1F1F1),
-        leading: IconButton(onPressed: (){}, icon: const Icon(Icons.keyboard_arrow_left, color: Color(0xFF22215B))),
+        leading: IconButton(onPressed: (){
+          Navigator.of(context).pushNamed(LoginPage.routeName);
+        }, 
+        icon: const Icon(Icons.keyboard_arrow_left, color: Color(0xFF22215B))),
         title: const Text("My Profile", style: TextStyle(color: Color(0xFF22215B)),),
         actions: [
           IconButton(onPressed: (){}, icon: const Icon(Icons.more_horiz, color: Color(0xFF22215B)))

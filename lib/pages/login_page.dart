@@ -1,3 +1,5 @@
+import './profile_page.dart';
+import './home_page.dart';
 import 'package:flutter/material.dart';
 //import 'package:get/get.dart';
 
@@ -50,7 +52,9 @@ class LoginPage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     ElevatedButton(
-                      onPressed: (){},
+                      onPressed: (){
+                        Navigator.of(context).pushNamed(HomePage.routeName);
+                      },
                       style: ElevatedButton.styleFrom(                      
                         backgroundColor: const Color.fromARGB(255, 242, 243, 243),
                         fixedSize: const Size(140,45),
@@ -62,7 +66,7 @@ class LoginPage extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Image.asset(
-                            "assets/images/fingerprint.png",
+                            "assets/icons/fingerprint.png",
                             //fit: BoxFit.contain, 
                           ),
                           const SizedBox(width: 10),
@@ -71,7 +75,9 @@ class LoginPage extends StatelessWidget {
                       ),                    
                     ),
                     ElevatedButton(
-                      onPressed: (){},
+                      onPressed: (){
+                        Navigator.of(context).pushNamed(ProfilePage.routeName);
+                      },
                       style: ElevatedButton.styleFrom(                      
                         backgroundColor: const Color.fromARGB(255, 90, 130, 251),
                         fixedSize: const Size(140,45),

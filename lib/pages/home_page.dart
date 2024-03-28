@@ -1,3 +1,4 @@
+import './login_page.dart';
 import 'package:flutter/material.dart';
 
 
@@ -16,10 +17,9 @@ class HomePage extends StatelessWidget {
       body: const Center(child: Text("This is Home Page")),
       floatingActionButton: FloatingActionButton(
         onPressed:(){
-          Navigator.of(context).pop();
+          Navigator.of(context).pushNamed(LoginPage.routeName);
         },
-        child: const Icon(Icons.keyboard_arrow_left),
-
+        child: const Icon(Icons.login),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );

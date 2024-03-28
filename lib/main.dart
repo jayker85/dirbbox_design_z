@@ -23,11 +23,11 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       home: const HomePage(),
-      initialRoute: LoginPage.routeName,
+      initialRoute: HomePage.routeName,
       routes: {
         LoginPage.routeName:(context) => const LoginPage(),
         ProfilePage.routeName:(context) => const ProfilePage(),
-        //HomePage.routeName:(context) => HomePage(),
+        HomePage.routeName:(context) => const HomePage(),
         //StoragePage.routeName:(context) => StoragePage(),
         //SettingPage.routeName:(context) => SettingPage(),
       }
